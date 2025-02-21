@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Header Styling */
+header {
+  background-color: #08A6E2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0; /* Further reduced padding */
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #08A6E2;
+  padding: 5px 10px; /* Reduced padding */
+  display: flex;
+  align-items: center; /* Keep items aligned */
+}
+
+/* Adjust Logo Size */
+.navbar-brand img {
+  width: 200px; /* Smaller size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Default Navbar Link Styling (For Desktop) */
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 20px; /* Increased font size for desktop */
+  padding: 6px 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 576px) {
+  header {
+    padding: 2px 0; /* Minimal padding */
+  }
+
+  .navbar {
+    padding: 4px 8px;
+  }
+
+  .navbar-brand img {
+    width: 60px; /* Even smaller for mobile */
+   
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Smaller font size for iPhone 8 Plus */
+    padding: 4px 6px;
+  }
+}
+  
+  /* About Content Layout */
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .about-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .about-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Typography */
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .tagline {
+    font-size: 20px;
+    color: #08A6E2;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #555;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .features li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    gap: 10px;
+  }
+  
+  .features li::before {
+    content: "✅";
+    font-size: 14px;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .tagline {
+      font-size: 18px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  
+    .features li {
+      font-size: 14px;
+    }
+  
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .tagline {
+      font-size: 16px;
+    }
+  
+    .description {
+      font-size: 12px;
+    }
+  
+    .features li {
+      font-size: 12px;
+    }
+  
+    .cta-button {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  }
+
+
+  .footer {
+    background: #00A5E2;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .footer p,
+  .footer a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer a:hover {
+    color: whitesmoke;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    font-size: 18px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+    color: whitesmoke;
+  }
+  
+  .copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 100%;
+    }
+  }
