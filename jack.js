@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyVideos = document.querySelectorAll(".lazy-video");
+
+  const videoObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        const source = video.querySelector("source");
+
+        if (source.dataset.src) {
+          source.src = source.dataset.src;
+          video.load(); 
+        }
+
+        observer.unobserve(video);
+      }
+    });
+  });
+
+  lazyVideos.forEach(video => videoObserver.observe(video));
+});
+
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');

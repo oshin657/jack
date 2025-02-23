@@ -224,6 +224,7 @@ header {
     }
   }
   
+
 /* Best Selling Section */
 .best-selling {
   max-width: 1500px;
@@ -232,12 +233,10 @@ header {
   text-align: center;
 }
 
-
-
 /* Models Grid */
 .models-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Default grid layout */
   gap: 20px;
   padding: 10px;
 }
@@ -261,7 +260,7 @@ header {
 /* Image Container */
 .image-container {
   width: 100%;
-  height: 200px; /* Fixed height for better consistency */
+  height: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -271,7 +270,7 @@ header {
 .image-container img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Prevents cropping while maintaining aspect ratio */
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -285,7 +284,7 @@ header {
   font-weight: bold;
   margin: 15px 0 10px;
   color: #333;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Read More Button */
@@ -306,28 +305,9 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .models-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .image-container {
-    height: 160px;
-  }
-
-  .model-name {
-    font-size: 18px;
-  }
-
-  .read-more {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-}
-
 @media (max-width: 576px) {
   .models-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row on mobile screens */
   }
 
   .image-container {
@@ -343,6 +323,7 @@ header {
     font-size: 12px;
   }
 }
+
 
 .services-grid {
   display: grid;
